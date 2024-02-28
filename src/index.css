@@ -110,7 +110,7 @@ body{
 main{
     background-color:  transparent;
     backdrop-filter: blur(10px);
-    border: solid 1px gray;
+    border: solid 1px var(--clear-blue);
     height: 80vh;
     width: 70%;
     margin-top: 130px;
