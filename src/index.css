@@ -5,10 +5,15 @@
     --blue-lucid: rgb(12, 56, 62, 0.5);
     --black: #27272a;
     --shadow: #09090b;
-    --main: #1f2937;
+    --main: rgba(243, 243, 243, 0.1);
     --ctn-repo: #e2e8f0;
+    --ctn-repo-hover: #ced2d6;
     --snippet-html: #f97316;
     --snippet-css: #0284c7;
+    --snippet-js: #facc15;
+    --snippet-py: #0c4a6e;
+    --snippet-bt: #6d28d9;
+
 
 }
 
@@ -103,7 +108,9 @@ body{
 }
 
 main{
-    background-color: var(--main);
+    background-color:  transparent;
+    backdrop-filter: blur(10px);
+    border: solid 1px gray;
     height: 80vh;
     width: 70%;
     margin-top: 130px;
@@ -150,25 +157,27 @@ main{
 
 .grid-port{
     margin-top: 100px;
-    height: 80vh;
+    height: 70vh;
     width: 70%;
     display: grid;
     grid-template-columns: 50% 50%;
-    column-gap: 15px;
+    grid-template-rows: 50% 50%;
+   gap: 15px;
 }
 
 .grid1{
     border-radius: 15px;
     background-color: var(--ctn-repo);
     color: var(--shadow);
-    width: 480px;
-    height: 196px;
+  
     text-decoration: none;
 }
 
 .content-grid{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
     gap: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -195,7 +204,8 @@ main{
 .snippets{
     display: flex;
     gap: 20px;
-    color: var(--white);
+    color: var(--shadow);
+    font-weight: 500;
 }
 
 .snippet-html{
@@ -203,6 +213,7 @@ main{
     width: 50px;
     height: 20px;
     padding: 5px;
+    padding-left: 8px;
     background-color: var(--snippet-html);
 }
 .snippet-css{
@@ -210,15 +221,41 @@ main{
     width: 40px;
     height: 20px;
     padding: 5px;
+    padding-left: 8px;
     background-color: var(--snippet-css);
+}
+
+.snippet-js{
+    border-radius: 25px;
+    width: 90px;
+    height: 20px;
+    padding: 5px;
+    padding-left: 8px;
+    background-color: var(--snippet-js);
+}
+
+.snippet-py{
+    border-radius: 25px;
+    width: 65px;
+    height: 20px;
+    padding: 5px;
+    padding-left: 8px;
+    background-color: var(--snippet-py);
+}
+.snippet-bt{
+    border-radius: 25px;
+    width: 85px;
+    height: 20px;
+    padding: 5px;
+    padding-left: 8px;
+    background-color: var(--snippet-bt);
 }
 
 .grid2{
     border-radius: 15px;
     background-color: var(--ctn-repo);
     color: var(--shadow);
-    width: 480px;
-    height: 196px;
+   
     text-decoration: none;
 }
 
@@ -237,18 +274,20 @@ main{
     border-radius: 15px;
     background-color: var(--ctn-repo);
     color: var(--shadow);
-    width: 480px;
-    height: 196px;
+    
     text-decoration: none;
 }
 .grid4{
     border-radius: 15px;
     background-color: var(--ctn-repo);
     color: var(--shadow);
-    width: 480px;
-    height: 196px;
+   
     text-decoration: none;
 }   
+
+.grid-port>a:hover{
+    background-color: var(--ctn-repo-hover);
+}
 
 /* botão Back top  */
 .back-to-top {
